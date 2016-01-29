@@ -12,18 +12,20 @@ Após iniciar a instalação, verifique se você tem conexão com a internet (ut
 >
 	ping 8.8.8.8 -c5
 
-Caso você ainda não tenha conexão com a internet ative o dhcpcd:
+Caso você ainda não tenha conexão com a internet ative o dhcpcd com o comando:
 >
 	systemctl start dhcpcd
 
-Caso deseje conectar-se via Wireless utilize o comando 'wifi-menu'.
+Caso deseje conectar-se via Wireless utilize o comando `wifi-menu`.
  
 2 - Configurando as partições
 ==========
-Existem várias formas e ferramentas para se particionar o disco. Iremos utilizar a ferramenta Cfdisk para criar as partições, e irei abordar a forma de particionamento para os dois tipos de tabelas de partições (GPT e MBR).
+Existem várias formas e ferramentas para se particionar o disco. Iremos utilizar a ferramenta `Cfdisk` para criar as partições, e irei abordar a forma de particionamento para os dois tipos de tabelas de partições (GPT e MBR).
 
-Inicie o Cfdisk.
+Inicie o Cfdisk:
 >
 	cfdisk
-
+A interface de particionamento é essa:
 ![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.2.png)
+
+Em seguida particione o seu disco de acordo com oque você utilizar, GPT ou MBR.
