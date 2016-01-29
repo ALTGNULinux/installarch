@@ -26,8 +26,6 @@ Existem várias formas e ferramentas para se particionar o disco. Iremos utiliza
 
 ***Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR (estão separadas por partes no tutorial 2.1 e 2.2).***
 
-***Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!***
-
 
 Inicie o Cfdisk:
 >
