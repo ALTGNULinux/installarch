@@ -86,9 +86,11 @@ Execute o seguinte comando:
 >
 	pacstrap /mnt base base-devel
 
+O Download ira começar...
+
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.1.png)
 
-E aguarde o processo ser finalizado...
+Aguarde o processo ser finalizado...
 
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.2.png)
 
