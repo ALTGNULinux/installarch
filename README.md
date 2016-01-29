@@ -30,18 +30,20 @@ Inicie o Cfdisk:
 A interface de particionamento é essa:
 ![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.2.png)
 
-***Em seguida particione o seu disco de acordo com oque você utilizar, GPT ou MBR.***
+
+**Em seguida particione o seu disco de acordo com oque você utilizar, GPT ou MBR.**
 
 ### MBR - BIOS
 Sera criada a seguinte partição (onde X é o numero da partição):
 >
-	/dev/sdaX	 como /		com o tamanho que desejar e bootavel
+	/dev/sdaX	 como /		sera bootavel e com o tamanho que desejar
 
 No `cfdisk` devera ficar da seguinte forma:
 ![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.3.png)
 
-Se tudo estiver certo grave as alterações no disco.
-Agora iremos formatar e montar a partição criada:
+Se tudo estiver correto grave as alterações no disco.
+Agora iremos formatar e montar a partição criada.
+Execute os seguintes comandos:
 >
 	mkfs.ext4 /dev/sdaX  (A partição selecionada será formatada em ext4)
 	mount /dev/sdaX /mnt (Será montada a partição em /mnt)
