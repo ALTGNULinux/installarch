@@ -76,7 +76,7 @@ Execute os seguintes comandos:
 	mkdir /mnt/home (Será criada a pasta home dentro de /mnt)
 	mount /dev/sda1 /mnt/boot (Monta a partição de boot)
 
-3 - Instalação do Sistema Base do Arch Linux
+3 - Instalando o Sistema Base do Arch Linux
 ==========
 Iremos agora instalar a base do sistema. Caso sua internet for lenta sugiro um café! =D
 
