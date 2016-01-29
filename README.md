@@ -1,6 +1,6 @@
 # Instalando Arch Linux e aprendendo sobre Linux no Processo
 ==========
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/ArchLinux2.png)
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/ArchLinux.png)
 
 1 - Obtendo a ISO de instalação do Arch Linux
 ==========
@@ -119,9 +119,36 @@ Após executar o comando deverá ficar assim:
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/4.1.png)
 
 Agora devemos configurar o locales, para definir o nosso idioma e layout do teclado.
-Abra o arquivo /etc/locale.gen e remova o # da frente de pt_BR.UTF-8 UTF-8.
+Abra o arquivo /etc/locale.gen e remova o # da frente de pt_BR.UTF-8 UTF-8, ou referente ao idioma do seu teclado.
 >
-	nano /etc/locale.gen (Remova # do inicio da linha referente a linguagem desejada)
+	nano /etc/locale.gen (Remova # do inicio da linha referente ao idioma desejado)
+	locale-gen
 
 Após realizar as modificações salve o arquivo.
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/4.2.png)
+
+Em seguida iremos configurar o nosso idioma, criando o arquivo /etc/locale.conf (caso deseje utilizar um idioma diferente adapte o comando de acordo com o desejado).
+Execute o comando, para definir o nosso idioma:
+>
+	echo LANG=pt_BR.UTF-8 > /etc/locale.conf
+	export LANG=pt_BR.UTF-8
+
+Foi criado o arquivo com os parametros passados no comando:
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/4.3.png)
+
+Agora vamos configurar o fuso horário.
+Podem ser vistas, as regiões do Brazil com o seguinte comando:
+>
+	ls /usr/share/zoneinfo/Brazil
+
+No meu caso irei utilizar East, execute o comando:
+>
+	ln -s /usr/share/zoneinfo/Brazil/East /etc/localtime
+
+Vamos definir um hostname para a maquina:
+>
+	echo Arch > /etc/hostname
+
+E definir uma senha de root:
+>
+	passwd
