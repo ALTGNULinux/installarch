@@ -33,10 +33,11 @@ A interface de particionamento é essa:
 
 **Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR.**
 
-### MBR - BIOS
-Sera criada a seguinte partição (onde X é o numero da partição):
+### -> MBR - BIOS
+**Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!**
+Sera criada a seguinte partição:
 >
-	/dev/sdaX	 como /		sera bootavel e com o tamanho que desejar
+	/dev/sda1	 como /		sera bootavel e com o tamanho que desejar
 
 No `cfdisk` devera ficar da seguinte forma:
 ![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.3.png)
@@ -47,6 +48,32 @@ Agora iremos formatar e montar a partição criada.
 
 Execute os seguintes comandos:
 >
-	mkfs.ext4 /dev/sdaX  (A partição selecionada será formatada em ext4)
-	mount /dev/sdaX /mnt (Será montada a partição em /mnt)
+	mkfs.ext4 /dev/sda1  (A partição selecionada será formatada em ext4)
+	mount /dev/sda1 /mnt (Será montada a partição em /mnt)
 	mkdir /mnt/home (Sera criada a home dentro de /mnt)
+
+### -> GPT - UEFI
+**Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!**
+Serão criadas as seguintes partições:
+>
+	/dev/sda1	como /boot		com o tamanho de 512M e bootavel
+	/dev/sda2	como /			com o tamanho que desejar
+
+No `cfdisk` devera ficar da seguinte forma:
+![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.4.png)
+
+Se tudo estiver correto grave as alterações no disco.
+
+Agora iremos formatar e montar a partição criada.
+
+Execute os seguintes comandos:
+>
+	mkfs.vfat -F32 /dev/sda1  (Formata e prepara a partição de boot)
+	mkfs.ext4 /dev/sda2 (A partição selecionada será formatada em ext4)
+	mount /dev/sda2 /mnt (Será montada a partição sda2 em /mnt)
+	mkdir /mnt/boot (Sera criada a pasta boot dentro de /mnt)
+	mkdir /mnt/home (Sera criada a pasta home dentro de /mnt)
+	mount /dev/sda1 /mnt/boot (Monta a partição de boot)
+
+3 - Instalação do Sistema Base do Arch Linux
+==========
