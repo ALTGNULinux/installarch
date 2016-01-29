@@ -180,9 +180,11 @@ Execute os seguintes comandos:
 	grub-mkconfig -o /boot/grub/grub.cfg
 	mkinitcpio -p linux
 
-4 - Configurando Pacman
+5 - Configurando o Gerenciador de pacotes Pacman
 ==========
 Definindo algumas configurações adicionais para seu gerenciador de pacotes.
+
+Vamos habilitar o repositório multilib, o qual permite ao usuário baixar e executar aplicações 32 e 64 bits.
 
 Abra o arquivo pacman.conf.
 >
@@ -192,3 +194,19 @@ E adicione ou descomente as linhas:
 >
 	[multilib]
 	Include = /etc/pacman.d/mirrorlist
+
+Devera ficar assim:
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.1.png)
+
+Vamos tambem alterar algumas configurações do pacman, isso é opcional. Vamos deixar as cores das fontes no terminal coloridas, e utilizar um pacman na barra de progresso.
+
+Exemplo:
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.3.png)
+
+Abra o arquivo `pacman.conf` e descomente a linha Color e adicione ILoveCandy:
+Ficando assim:
+>
+	Color
+	ILoveCandy
+Dessa forma:
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.2.png)
