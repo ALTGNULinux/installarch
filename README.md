@@ -94,9 +94,11 @@ Aguarde o processo ser finalizado...
 
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.2.png)
 
-Em seguida devemos gerar o nosso fstab que significa File System Table, que fica localizado em /etc/fstab. Ele define como as partições do disco e outros dispositivos serão montados para o sistema de arquivo. Vamos utilizar uma ferramenta do sistema para gerar o fstab automaticamente.
+Em seguida devemos gerar o nosso fstab que significa File System Table, que fica localizado em /etc/fstab. Ele define como as partições do disco e outros dispositivos serão montados para o sistema de arquivo. 
 
-Para gera-lo execute:
+Iremos utilizar uma ferramenta do sistema para gerar o fstab automaticamente.
+
+Para gerá-lo execute:
 >
 	genfstab /mnt >> /mnt/etc/fstab
 
