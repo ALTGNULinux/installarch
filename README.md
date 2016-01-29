@@ -65,7 +65,7 @@ No `cfdisk` devera ficar da seguinte forma:
 
 Se tudo estiver correto grave as alterações no disco.
 
-Agora iremos formatar e montar a partição criada.
+Agora iremos formatar e montar as partições criadas.
 
 Execute os seguintes comandos:
 >
@@ -128,6 +128,7 @@ Após realizar as modificações salve o arquivo.
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/4.2.png)
 
 Em seguida iremos configurar o nosso idioma, criando o arquivo /etc/locale.conf (caso deseje utilizar um idioma diferente adapte o comando de acordo com o desejado).
+
 Execute o comando, para definir o nosso idioma:
 >
 	echo LANG=pt_BR.UTF-8 > /etc/locale.conf
@@ -141,7 +142,7 @@ Podem ser vistas, as regiões do Brazil com o seguinte comando:
 >
 	ls /usr/share/zoneinfo/Brazil
 
-No meu caso irei utilizar East, execute o comando:
+No meu caso irei utilizar East, execute o comando para criar um link simbolico:
 >
 	ln -s /usr/share/zoneinfo/Brazil/East /etc/localtime
 
@@ -152,3 +153,38 @@ Vamos definir um hostname para a maquina:
 E definir uma senha de root:
 >
 	passwd
+
+4 - Instalando o Bootloader
+==========
+Iremos utilizar o grub, mas caso deseje utilizar outro bootloader podem ser obtidas mais informações na [pagina oficial] (https://wiki.archlinux.org/index.php/Boot_loaders).
+
+Da mesma maneira que no particionamento de disco, que foi dividido em duas partes GPT e MBR, a instalação do grub tambem será divida nessas duas partes.
+
+### 4.1 MBR - BIOS
+Execute os seguintes comandos:
+>
+	pacman -S grub os-prober (Instalar grub e os-prober que permite reconhecer outros sistemas operacionais)
+	grub-install /dev/sda
+	mkinitcpio -p linux
+	grub-mkconfig -o /boot/grub/grub.cfg
+
+### 4.2 GPT - UEFI
+Execute os seguintes comandos:
+>
+	pacman -S grub efibootmgr os-prober
+	grub-install --target=x86_64-efi --efi-directory=boot --bootloader-id=arch_grub
+	grub-mkconfig -o /boot/grub/grub.cfg
+	mkinitcpio -p linux
+
+4 - Configurando Pacman
+==========
+Definindo algumas configurações adicionais para seu gerenciador de pacotes.
+
+Abra o arquivo pacman.conf.
+>
+	nano /etc/pacman.conf
+
+E adicione ou descomente as linhas:
+>
+	[multilib]
+	Include = /etc/pacman.d/mirrorlist
