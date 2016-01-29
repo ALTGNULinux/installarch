@@ -196,11 +196,13 @@ E adicione ou descomente as linhas:
 	Include = /etc/pacman.d/mirrorlist
 
 Devera ficar assim:
+
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.1.png)
 
 Vamos tambem alterar algumas configurações do pacman, isso é opcional. Vamos deixar as cores das fontes no terminal coloridas, e utilizar um pacman na barra de progresso.
 
 Exemplo:
+
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.3.png)
 
 Abra o arquivo `pacman.conf` e descomente a linha Color e adicione ILoveCandy:
@@ -208,5 +210,7 @@ Ficando assim:
 >
 	Color
 	ILoveCandy
+
 Dessa forma:
+
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.2.png)
