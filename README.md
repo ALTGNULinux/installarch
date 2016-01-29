@@ -161,7 +161,7 @@ Iremos utilizar o grub, mas caso deseje utilizar outro bootloader podem ser obti
 Da mesma maneira que no particionamento de disco, que foi dividido em duas partes GPT e MBR, a instalação do grub tambem será divida nessas duas partes. Prossiga de acordo com seu tipo de tabela de partição.
 
 ### 4.1 MBR - BIOS
-Sera instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina.
+Sera instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
 
 Execute os seguintes comandos:
 >
@@ -171,7 +171,7 @@ Execute os seguintes comandos:
 	grub-mkconfig -o /boot/grub/grub.cfg
 
 ### 4.2 GPT - UEFI
-Sera instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina.
+Sera instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
 
 Execute os seguintes comandos:
 >
