@@ -23,7 +23,8 @@ Caso deseje conectar-se via Wireless utilize o comando `wifi-menu`.
 Existem várias formas e ferramentas para se particionar o disco. Iremos utilizar a ferramenta `Cfdisk` para criar as partições, e irei abordar a forma de particionamento para os dois tipos de tabelas de partições (GPT e MBR).
 
 **Tenha cuidado nessa parte!**
-
+** * Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR.**
+** * Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!**
 Inicie o Cfdisk:
 >
 	cfdisk
@@ -31,11 +32,8 @@ A interface de particionamento é essa:
 ![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.2.png)
 
 
-**Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR.**
-
 ### MBR - BIOS
 ==========
-**Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!**
 
 Sera criada a seguinte partição:
 >
@@ -56,7 +54,6 @@ Execute os seguintes comandos:
 
 ### GPT - UEFI
 ==========
-**Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!**
 
 Serão criadas as seguintes partições:
 >
