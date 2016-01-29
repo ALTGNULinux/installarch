@@ -74,9 +74,18 @@ Execute os seguintes comandos:
 	mkfs.vfat -F32 /dev/sda1  (Formata e prepara a partição de boot)
 	mkfs.ext4 /dev/sda2 (A partição selecionada será formatada em ext4)
 	mount /dev/sda2 /mnt (Será montada a partição sda2 em /mnt)
-	mkdir /mnt/boot (Sera criada a pasta boot dentro de /mnt)
-	mkdir /mnt/home (Sera criada a pasta home dentro de /mnt)
+	mkdir /mnt/boot (Será criada a pasta boot dentro de /mnt)
+	mkdir /mnt/home (Será criada a pasta home dentro de /mnt)
 	mount /dev/sda1 /mnt/boot (Monta a partição de boot)
 
 3 - Instalação do Sistema Base do Arch Linux
 ==========
+Iremos agora instalar a base do sistema. Caso sua internet for lenta sugiro um café! =D
+
+Execute o seguinte comando:
+>
+	pacstrap /mnt base base-devel
+
+![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/3.1.png)
+
+E aguarde o processo ser finalizado...
