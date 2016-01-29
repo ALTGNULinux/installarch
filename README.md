@@ -24,7 +24,7 @@ Existem várias formas e ferramentas para se particionar o disco. Iremos utiliza
 
 **Tenha cuidado nessa parte!**
 
-***Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR.***
+***Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR. (estão separadas por partes no tutorial)***
 
 ***Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!***
 
@@ -36,7 +36,9 @@ A interface de particionamento é essa:
 ![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.2.png)
 
 
-### MBR - BIOS
+
+
+*** ### MBR - BIOS ***
 ==========
 Sera criada a seguinte partição:
 >
