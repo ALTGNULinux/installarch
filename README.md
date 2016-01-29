@@ -208,6 +208,8 @@ Exemplo:
 Abra o arquivo `pacman.conf` e descomente a linha Color e adicione ILoveCandy:
 Ficando assim:
 >
+	nano /etc/pacman.conf
+	
 	Color
 	ILoveCandy
 
