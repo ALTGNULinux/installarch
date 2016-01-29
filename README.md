@@ -23,8 +23,12 @@ Caso deseje conectar-se via Wireless utilize o comando `wifi-menu`.
 Existem várias formas e ferramentas para se particionar o disco. Iremos utilizar a ferramenta `Cfdisk` para criar as partições, e irei abordar a forma de particionamento para os dois tipos de tabelas de partições (GPT e MBR).
 
 **Tenha cuidado nessa parte!**
+
 ** * Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR.**
+
 ** * Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!**
+
+
 Inicie o Cfdisk:
 >
 	cfdisk
@@ -34,7 +38,6 @@ A interface de particionamento é essa:
 
 ### MBR - BIOS
 ==========
-
 Sera criada a seguinte partição:
 >
 	/dev/sda1	 como /		sera bootavel e com o tamanho que desejar
@@ -54,7 +57,6 @@ Execute os seguintes comandos:
 
 ### GPT - UEFI
 ==========
-
 Serão criadas as seguintes partições:
 >
 	/dev/sda1	como /boot		com o tamanho de 512M
