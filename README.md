@@ -1,12 +1,12 @@
 # Como Instalar Arch Linux e Aprender sobre Linux no Processo
 ==========
-![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/ArchLinux2.png)
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/ArchLinux2.png)
 
 1 - Obtendo a ISO de instalação do Arch Linux
 ==========
 Você pode obter a ISO de instalação do Arch na [pagina de download] (https://www.archlinux.org/download/). Como trata-se de uma distribuição Rolling Release, é gerada uma ISO atualizada mensalmente. Após obter a instalação, grave a ISO em um CD ou Pen Drive e inicie a instalação.
 
-![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/1.1.png)
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/1.1.png)
 
 Após iniciar a instalação, verifique se você tem conexão com a internet (utilizarei conexão cabeada durante o procedimento). Teste com o seguinte comando:
 >
@@ -33,7 +33,7 @@ Inicie o Cfdisk:
 >
 	cfdisk
 A interface de particionamento é essa:
-![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.2.png)
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/2.2.png)
 
 
 ### 2.1 MBR - BIOS
@@ -86,6 +86,22 @@ Execute o seguinte comando:
 >
 	pacstrap /mnt base base-devel
 
-![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/3.1.png)
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.1.png)
 
 E aguarde o processo ser finalizado...
+
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.2.png)
+
+Em seguida devemos gerar o nosso fstab que significa File System Table, que fica localizado em /etc/fstab. Ele define como as partições do disco e outros dispositivos serão montados para o sistema de arquivo. Vamos utilizar uma ferramenta do sistema para gerar o fstab automaticamente.
+
+Para gera-lo execute:
+>
+	genfstab /mnt >> /mnt/etc/fstab
+
+Caso desejar você pode visualizar o arquivo ou edita-lo com:
+>
+	cat /mnt/etc/fstab
+	nano /mnt/etc/fstab
+
+Arquivo gerado pelo genfstab:
+![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.3.png)
