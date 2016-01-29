@@ -1,4 +1,4 @@
-# Como Instalar Arch Linux e Aprender sobre Linux no Processo
+# Instalando Arch Linux e aprendendo sobre Linux no Processo
 ==========
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/ArchLinux2.png)
 
