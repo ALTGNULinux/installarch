@@ -1,5 +1,6 @@
 # Instalando Arch Linux e aprendendo sobre Linux no Processo
 ==========
+
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/ArchLinux.png)
 
 1 - Obtendo a ISO de instalação do Arch Linux
