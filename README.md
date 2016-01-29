@@ -33,8 +33,10 @@ A interface de particionamento é essa:
 
 **Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR.**
 
-### -> MBR - BIOS
+### MBR - BIOS
+==========
 **Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!**
+
 Sera criada a seguinte partição:
 >
 	/dev/sda1	 como /		sera bootavel e com o tamanho que desejar
@@ -52,11 +54,13 @@ Execute os seguintes comandos:
 	mount /dev/sda1 /mnt (Será montada a partição em /mnt)
 	mkdir /mnt/home (Sera criada a home dentro de /mnt)
 
-### -> GPT - UEFI
+### GPT - UEFI
+==========
 **Tenha cuidado com o numero das partições, que para você possivelmente seja diferente!**
+
 Serão criadas as seguintes partições:
 >
-	/dev/sda1	como /boot		com o tamanho de 512M e bootavel
+	/dev/sda1	como /boot		com o tamanho de 512M
 	/dev/sda2	como /			com o tamanho que desejar
 
 No `cfdisk` devera ficar da seguinte forma:
