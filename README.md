@@ -37,7 +37,7 @@ A interface de particionamento é essa:
 
 
 ### 2.1 MBR - BIOS
-==========
+
 Sera criada a seguinte partição:
 >
 	/dev/sda1	 como /		sera bootavel e com o tamanho que desejar
@@ -56,7 +56,7 @@ Execute os seguintes comandos:
 	mkdir /mnt/home (Sera criada a home dentro de /mnt)
 
 ### 2.2 GPT - UEFI
-==========
+
 Serão criadas as seguintes partições:
 >
 	/dev/sda1	como /boot		com o tamanho de 512M
